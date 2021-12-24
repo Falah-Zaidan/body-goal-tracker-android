@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/proteinTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/carbsTextview"
+        app:layout_constraintStart_toStartOf="@+id/carbsTextview"
+        app:layout_constraintTop_toBottomOf="@+id/carbsTextview" />
+
+    <TextView
+        android:id="@+id/calorieTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/caloriestext"
+        app:layout_constraintStart_toEndOf="@+id/caloriestext" />
+
+    <TextView
+        android:id="@+id/fatsTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/proteinTextview"
+        app:layout_constraintStart_toStartOf="@+id/proteinTextview"
+        app:layout_constraintTop_toBottomOf="@+id/proteinTextview" />
+
+    <TextView
+        android:id="@+id/carbsTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/calorieTextview"
+        app:layout_constraintStart_toStartOf="@+id/calorieTextview"
+        app:layout_constraintTop_toBottomOf="@+id/calorieTextview" />
+
+    <TextView
+        android:id="@+id/caloriestext"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/caloriesColon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carbstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/carbsColon"
+        app:layout_constraintEnd_toEndOf="@+id/caloriestext"
+        app:layout_constraintStart_toStartOf="@+id/caloriestext"
+        app:layout_constraintTop_toBottomOf="@+id/caloriestext" />
+
+    <TextView
+        android:id="@+id/proteintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/proteinColon"
+        app:layout_constraintEnd_toEndOf="@+id/carbstext"
+        app:layout_constraintStart_toStartOf="@+id/carbstext"
+        app:layout_constraintTop_toBottomOf="@+id/carbstext" />
+
+    <TextView
+        android:id="@+id/fatstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fatsColon"
+        app:layout_constraintEnd_toEndOf="@+id/proteintext"
+        app:layout_constraintStart_toStartOf="@+id/proteintext"
+        app:layout_constraintTop_toBottomOf="@+id/proteintext" />
+
+    <TextView
+        android:id="@+id/datetextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_width="153dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

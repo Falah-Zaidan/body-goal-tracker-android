@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bodygoaltracker"
+    android:versionCode="1"
+    android:versionName="MacroTracker-1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name="com.bodygoaltracker.Activities.AddItemSeperately"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.DayBreakdown">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.DayBreakdown" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.Take_picture"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.Log_Progress">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.Log_Progress" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.BWInput"
+            android:parentActivityName="com.bodygoaltracker.Activities.Log_Progress"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.Log_Progress" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.android.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.bodygoaltracker.Activities.DayBreakdown"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.Log_Food_Details">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.Log_Food_Details" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.AddItem"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.DayBreakdown">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.DayBreakdown" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.Log_Food_Details"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.Log_Progress"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.bodygoaltracker.Activities.Track_progress"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.bodygoaltracker.Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bodygoaltracker.Activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.bodygoaltracker.Activities.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
